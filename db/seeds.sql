@@ -1,12 +1,12 @@
 USE brews_db;
 
 INSERT INTO beers (beer_name, quaffed)
-VALUES ("Cozy Sweater");
+VALUES ("Cozy Sweater", false);
 INSERT INTO beers (beer_name, quaffed)
-VALUES ("Mocha Death");
+VALUES ("Mocha Death", false);
 INSERT INTO beers (beer_name, quaffed)
-VALUES ("Punkachino");
+VALUES ("Punkachino", false);
 INSERT INTO beers (beer_name, quaffed)
-VALUES ("Night Owl");
+VALUES ("Night Owl", false);
 INSERT INTO beers (beer_name, quaffed)
-VALUES ("The Duchess");
+VALUES ("The Duchess", false);
