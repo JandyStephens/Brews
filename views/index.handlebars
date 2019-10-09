@@ -3,9 +3,11 @@
 <h2>Drink Me!</h2>
 
 <ul>
-    {{#each brews}}
-    {{#unless sleepy}}
-    {{> cats/cat-block sleep=true}}
+    {{#each brew_data}}
+    {{#unless quaffed}}
+    {{!-- {{> cats/cat-block sleep=true}} --}}
+    {{> brews/brew-block quaffed=true}}
+    <li>{{beer_name}}</li>
     {{/unless}}
     {{/each}}
 </ul>
@@ -14,8 +16,8 @@
 
 <ul>
     {{#each brews}}
-    {{#if sleepy}}
-    {{> cats/cat-block sleep=false}}
+    {{#if quaffed}}
+    {{> brews/brew-block quaffed=false}}
     {{/if}}
     {{/each}}
 </ul>
@@ -28,11 +30,6 @@
         <input type="text" id="ca" name="name">
     </div>
 
-    <div class="form-group">
-        <label for="sleepy">Sleepy?</label><br>
-        <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-        <input type="radio" name="sleepy" value="0"> Awake
-    </div>
 
     <button type="submit">Pour my beer, barkeep!</button>
 </form>
