@@ -13,7 +13,7 @@ router.post("/api/brews", function (req, res) {
     beer.create([
         "beer_name", "quaffed"
     ], [
-        req.body.name, req.body.quaffed
+        req.body.beer_name, req.body.quaffed
     ], function (result) {
         // Send back the ID of the new quote
         res.json({ id: result.insertId });
