@@ -4,17 +4,20 @@ $(function () {
     var id = $(this).data("id");
     var newBeer = $(this).data("newbeer");
 
-    var newSleepState = {
-      sleepy: newSleep
-    };
+    // var newSleepState = {
+    //   sleepy: newSleep
+    // };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/brews/" + id, {
       type: "PUT",
-      data: newSleepState
+      data: {
+        quaffed: 1
+      }
     }).then(
       function () {
-        console.log("changed sleep to", newSleep);
+        // alert();
+        // console.log("changed sleep to", newSleep);
         // Reload the page to get the updated list
         location.reload();
       }
