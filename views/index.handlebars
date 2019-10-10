@@ -1,5 +1,5 @@
 <h1>Manatee Brewery</h1>
-
+<hr>
 <h2>Drink Me!</h2>
 
 <ul>
@@ -11,16 +11,18 @@
     {{/unless}}
     {{/each}}
 </ul>
+<hr>
 
 <h2>Drinks you've dRuNk</h2>
 
 <ul>
-    {{#each brews}}
+    {{#each brew_data}}
     {{#if quaffed}}
     {{> brews/brew-block quaffed=false}}
     {{/if}}
     {{/each}}
 </ul>
+<hr>
 
 <h2>Request a beer</h2>
 <form class="create-form">
@@ -28,8 +30,6 @@
     <div class="form-group">
         <label for="beername">Beer Name:</label>
         <input type="text" id="beername" name="name">
+        <button type="submit">Pour my beer, barkeep!</button>
     </div>
-
-
-    <button type="submit">Pour my beer, barkeep!</button>
 </form>

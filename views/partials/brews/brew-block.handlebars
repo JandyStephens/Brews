@@ -1,9 +1,11 @@
 <li>
     {{beer_name}}
 
-    <button class="change-quaffed" data-id="{{id}}" data-newquaff="{{quaffed}}">
-        {{#if quaffed}}CHEERS!{{else}}WAKE UP!{{/if}}
+    {{#if quaffed}}
+    <button class="change-quaffed" data-id="{{id}}" data-newquaff="{{quaffed}}">CHEERS!
     </button>
-
+    {{else}}
+    <button class="delete-beer" data-id="{{id}}">Clear empty glass</button>
+    {{/if}}
     {{!-- <button class="delete-beer" data-id="{{this.id}}">CHEERS!</button> --}}
 </li>
